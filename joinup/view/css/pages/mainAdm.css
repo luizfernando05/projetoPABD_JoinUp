@@ -1,0 +1,7 @@
+#main-content-admpage {
+    display: flex;
+    flex-direction: column; 
+    align-items: start; 
+    text-align: start; 
+    gap: 32px;
+}

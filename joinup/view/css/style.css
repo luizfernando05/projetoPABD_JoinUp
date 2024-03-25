@@ -1,0 +1,23 @@
+/* Importando os css's de estilos */
+
+@import url(./styles/colors.css);
+@import url(./styles/fonts.css);
+@import url(./styles/reset.css);
+@import url(./styles/placeholders.css);
+
+/* Estilos gerais */
+@import url(./main.css);
+
+/* Estilos das páginas */
+@import url(./pages/loginAdm.css);
+@import url(./pages/mainAdm.css);
+@import url(./pages/cadastrarEmpresa.css);
+@import url(./pages/cadastroSucesso.css);
+@import url(./pages/cadastrarOportunidade.css);
+@import url(./pages/mainContent.css);
+
+/* Estilos dos conteúdos */
+@import url(./contents/headerAdm.css);
+@import url(./contents/footerAdm.css);
+@import url(./contents/headerAll.css);
+@import url(./contents/footerAll.css);

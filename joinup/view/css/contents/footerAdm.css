@@ -1,0 +1,19 @@
+.content-foot {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    background-color: var(--color-c-12);
+    padding: 36px 60px;
+    height: 120px;
+    margin-top: 60px;
+}
+
+#text-foot {
+    display: flex;
+    flex-direction: column;
+    align-items: end; 
+    text-align: end; 
+}
+
+#text-foot img {
+    margin-top: 12px; 
+}

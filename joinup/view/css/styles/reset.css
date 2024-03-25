@@ -1,0 +1,40 @@
+/* Reset básico */
+body, h1, h2, h3, p, ul, li, div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Definir uma fonte base */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Definir tamanho de fonte base */
+body {
+    font-size: 16px;
+}
+
+/* Outras regras de estilo */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* Reset de estilos para listas */
+ul, ol {
+    list-style: none;
+}
+
+/* Reset de estilos para links */
+a {
+    color: inherit; /* Usar a cor padrão do texto */
+    text-decoration: none; /* Remover sublinhado padrão */
+}

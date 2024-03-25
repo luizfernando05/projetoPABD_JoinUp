@@ -1,0 +1,13 @@
+.footer-index-bg {
+    margin-top: 60px;
+    background-color: var(--color-c-12);
+    padding: 64px 60px;
+}
+
+.copy-footer-index {
+    margin-top: 24px;
+}
+
+.autoria-footer-index {
+    margin-bottom: 10px;
+}

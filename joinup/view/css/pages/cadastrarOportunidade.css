@@ -1,0 +1,14 @@
+#cadOportunidade h1 {
+    margin-bottom: 16px;
+}
+
+#form-cad-oportunidade label,
+#form-cad-oportunidade input,
+#form-cad-oportunidade select {
+    display: block; 
+    width: 100%;
+}
+
+#btn-cad-oportunidade {
+    margin-top: 10px;
+}

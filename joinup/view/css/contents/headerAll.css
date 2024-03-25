@@ -1,0 +1,13 @@
+.header-all-bg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 38px 0;
+    background-color: var(--color-c-02);
+}
+
+.nav-all {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}

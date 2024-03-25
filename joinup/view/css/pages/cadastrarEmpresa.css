@@ -1,0 +1,38 @@
+#form-cad-infoEmp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px; 
+    margin-top: 12px;
+}
+
+#cadEmp h1 {
+    grid-column: span 2;
+    margin-bottom: 8px;
+}
+
+#cadInfoEmp, #cadInfoContEmp {
+    padding-right: 24px; 
+}
+
+#cadInfoEmp input,
+#cadInfoContEmp input {
+    width: 100%;
+    background: var(--color-w-00);
+}
+
+#cadInfoEmp,
+#cadInfoContEmp {
+    display: flex;
+    flex-direction: column; /* Coloque os elementos em coluna */
+    margin-right: 20px; /* Espaço entre as colunas */
+}
+
+#cadInfoEmp label,
+#cadInfoContEmp label {
+    margin-bottom: 8px; /* Adicione margem inferior para separar as labels dos spans */
+}
+
+#cadInfoEmp span,
+#cadInfoContEmp span {
+    margin-bottom: 12px; /* Adicione margem superior para separar os spans das labels */
+}
