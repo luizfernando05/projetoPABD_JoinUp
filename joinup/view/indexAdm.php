@@ -60,6 +60,31 @@
         </div>
     </section>
 
+    <section>
+        <div class="container">
+            <h2 class="font-1-l color-c12">Oportunidades cadastradas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="font-1-m color-c12">Nome da oportunidade</th>
+                        <th class="font-1-m color-c12">Nome da empresa</th>
+                        <th class="font-1-m color-c12">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="font-1-xs color-c12">Estágio em Desenvolvimento Front-End</td>
+                        <td class="font-1-xs color-c12">Google</td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
     <!-- Rodapé da página -->
     <footer>
         <div class="content-foot">
