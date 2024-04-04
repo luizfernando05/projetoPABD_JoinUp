@@ -49,49 +49,65 @@
 
                 <div id="cadInfoOportunidade">
 
-                    <!-- Nome da oportunidade -->
-                    <label class="font-1-s color-c12" for="nomeOportunidade">Nome da oportunidade:</label>
-                    <input type="text" id="nomeOportunidade" name="nomeOportunidade" placeholder="Insira aqui o nome da oportunidade..." required>
+                    <div class="camposOportunidade">
+                        <!-- Nome da oportunidade -->
+                        <label class="font-1-s color-c12" for="nomeOportunidade">Nome da oportunidade:</label>
+                        <input type="text" id="nomeOportunidade" name="nomeOportunidade" placeholder="Insira aqui o nome da oportunidade..." required>
 
-                    <!-- CEP -->
-                    <label class="font-1-s color-c12" for="cep">CEP:</label>
-                    <input type="text" id="cep" name="cep" placeholder="00000000">
+                        <!-- CEP -->
+                        <label class="font-1-s color-c12" for="cep">CEP:</label>
+                        <input type="text" id="cep" name="cep" placeholder="00000000">
 
-                    <!-- Estado -->
-                    <label class="font-1-s color-c12" for="estado">Estado:</label>
-                    <input type="text" id="estado" name="estado" placeholder="Insira aqui o nome do estado...">
+                        <!-- Estado -->
+                        <label class="font-1-s color-c12" for="estado">Estado:</label>
+                        <input type="text" id="estado" name="estado" placeholder="Insira aqui o nome do estado...">
 
-                    <!-- Cidade -->
-                    <label class="font-1-s color-c12" for="cidade">Cidade:</label>
-                    <input type="text" id="cidade" name="cidade" placeholder="Insira aqui o nome da cidade...">
+                        <!-- Cidade -->
+                        <label class="font-1-s color-c12" for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade" placeholder="Insira aqui o nome da cidade...">
 
-                    <!-- Data de Início -->
-                    <label class="font-1-s color-c12" for="dataInicio">Data de Início:</label>
-                    <input type="date" id="dataInicio" name="dataInicio" required>
+                        <!-- Data de Início -->
+                        <label class="font-1-s color-c12" for="dataInicio">Data de Início:</label>
+                        <input type="date" id="dataInicio" name="dataInicio" required>
 
-                    <!-- Data de Término -->
-                    <label class="font-1-s color-c12" for="dataFim">Data de Término:</label>
-                    <input type="date" id="dataFim" name="dataFim" required>
+                        <!-- Data de Término -->
+                        <label class="font-1-s color-c12" for="dataFim">Data de Término:</label>
+                        <input type="date" id="dataFim" name="dataFim" required>
 
-                    <!-- Link de Inscrição -->
-                    <label class="font-1-s color-c12" for="linkIns">Link de Inscrição:</label>
-                    <input type="text" id="linkIns" name="linkIns" required placeholder="Insira aqui o link de inscrição...">
+                        <!-- Link de Inscrição -->
+                        <label class="font-1-s color-c12" for="linkIns">Link de Inscrição:</label>
+                        <input type="text" id="linkIns" name="linkIns" required placeholder="Insira aqui o link de inscrição...">
 
-                    <!-- Tipo de Oportunidade -->
-                    <label class="font-1-s color-c12" for="tipo">Tipo de Oportunidade (separe por vírgula, se houver mais de um):</label>
-                    <input type="text" id="tipo" name="tipo" required placeholder="Remoto, presencial, híbrido...">
+                        <!-- Tipo de Oportunidade -->
+                        <label class="font-1-s color-c12" for="tipo">Tipo de Oportunidade (separe por vírgula, se houver mais de um):</label>
+                        <input type="text" id="tipo" name="tipo" required placeholder="Remoto, presencial, híbrido...">
 
-                    <!-- Requisitos da Oportunidade -->
-                    <label class="font-1-s color-c12" for="requisitos">Requisitos da Oportunidade (separe por vírgula, se houver mais de um):</label>
-                    <input type="text" id="requisitos" name="requisitos" placeholder="Insira aqui os requisitos da oportunidade...">
+                        <!-- Requisitos da Oportunidade -->
+                        <label class="font-1-s color-c12" for="requisitos">Requisitos da Oportunidade (separe por vírgula, se houver mais de um):</label>
+                        <input type="text" id="requisitos" name="requisitos" placeholder="Insira aqui os requisitos da oportunidade...">
+                    </div>
 
-                    <!-- CNPJ da Empresa -->
-                    <label class="font-1-s color-c12" for="cnpjEmpresa">CNPJ da Empresa:</label>
-                    <input type="text" id="cnpjEmpresa" name="cnpjEmpresa" required placeholder="00000000000000">
+                    <div class="camposEmpresa">
+                        <!-- Nome da Empresa -->
+                        <label class="font-1-s color-c12" for="nomeEmpresa">Nome da Empresa:</label>
+                        <input type="text" id="nomeEmpresa" name="nomeEmpresa" required placeholder="Insira aqui o nome da empresa...">
 
-                    <!-- Usuário Administrador (preenchido automaticamente com o valor da sessão) -->
-                    <label class="font-1-s color-c12" for="usuarioAdm">Usuário Administrador:</label>
-                    <input type="text" id="usuarioAdm" name="usuarioAdm" value="<?php echo $_SESSION['usuarioAdm']; ?>"  required>
+                        <!-- Setor de atuação da empresa -->
+                        <label class="font-1-s color-c12" for="setorEmpresa">Insira o setor de atuação da empresa:</label>
+                        <input type="text" id="setorEmpresa" name="setorEmpresa" placeholder="Insira aqui o setor da empresa..." required>
+
+                        <!-- Campo para o e-mail de contato da empresa -->
+                        <label class="font-1-s color-c12" for="emailEmpresa">Insira o e-mail de contato da empresa:</label>
+                        <input type="text" id="emailEmpresa" name="emailEmpresa" placeholder="email@email.com" required>
+
+                        <!-- Campo para o telefone de contato da empresa -->
+                        <label class="font-1-s color-c12" for="telefoneEmpresa">Insira o telefone de contato da empresa:</label>
+                        <input type="number" id="telefoneEmpresa" name="telefoneEmpresa" placeholder="999999999" required>
+
+                        <!-- Usuário Administrador (preenchido automaticamente com o valor da sessão) -->
+                        <label class="font-1-s color-c12" for="usuarioAdm">Usuário Administrador:</label>
+                        <input type="text" id="usuarioAdm" name="usuarioAdm" value="<?php echo $_SESSION['usuarioAdm']; ?>"  required>
+                    </div>
                 </div>
 
                 <!-- Botão para enviar o formulário de cadastro -->
