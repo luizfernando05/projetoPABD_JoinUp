@@ -12,3 +12,9 @@
 #btn-cad-oportunidade {
     margin-top: 10px;
 }
+
+#cadInfoOportunidade {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
