@@ -99,49 +99,50 @@
         include_once('../model/config.php');
 
         try {
-            // Consulta SQL para recuperar informações das oportunidades de estágio
-            $query1 = "
-            SELECT o.nomeoportunidade, e.nomeempresa, t.tipo, o.cidade, o.estado, o.datainicio, o.datafim, e.setorempresa, e.emailempresa, e.telefoneempresa, o.linkins, string_agg(r.requisito, ', ') AS requisitos
-            FROM sistema.oporemp AS oe
-            INNER JOIN sistema.oportunidade AS o ON oe.idoportunidade = o.idoportunidade
-            INNER JOIN sistema.empresa AS e ON oe.cnpjempresa = e.cnpjempresa
-            INNER JOIN sistema.tipooportunidade AS t ON o.idoportunidade = t.idoportunidade
-            LEFT JOIN sistema.requisitooportunidade AS r ON o.idoportunidade = r.idoportunidade
-            GROUP BY o.nomeoportunidade, e.nomeempresa, t.tipo, o.cidade, o.estado, o.datainicio, o.datafim, e.setorempresa, e.emailempresa, e.telefoneempresa, o.linkins;
-            ";
 
-            // Executa a consulta e percorre os resultados para exibir as oportunidades
-            $stmt1 = $conn->query($query1);
+            #Collection onde estão as oportunidades
+            $collection = $database->oportunidade;
 
-            while ($row = $stmt1->fetch(PDO::FETCH_ASSOC)) {
-                // Exibe informações das oportunidades de estágio
+            #Busca no banco as oportunidades cadastradas
+            $cursor = $collection->find();
+
+            foreach ($cursor as $documento) {
                 echo '<div class="card-opor">';
-                echo '<h3 class="font-1-m-b color-c12">' . $row['nomeoportunidade'] . '</h3>';
+                echo '<h3 class="font-1-m-b color-c12">' . $documento['nomeOportunidade'] . '</h3>';
                 echo '<div class="info-gerais">';
-                echo '<span class="font-1-xs color-c12">' . $row['nomeempresa'] . '</span>';
-                echo '<span class="font-1-xs color-c12">' . $row['tipo'] . '</span>';
-                echo '<span class="font-1-xs color-c12">' . $row['cidade'] . ', ' . $row['estado'] . '</span>';
+                echo '<span class="font-1-xs color-c12">' . $documento['nomeEmpresa'] . '</span>';
+        
+                foreach ($documento['tipo'] as $tipo) {
+                    echo '<span class="font-1-xs color-c12">' . $tipo . '</span>';
+                }
+          
+                echo '<span class="font-1-xs color-c12">' . $documento['cidade'] . ', ' . $documento['estado'] . '</span>';
                 echo '</div>';
                 echo '<div class="cards-opor-info">';
                 echo '<div class="opor-preRequi">';
                 echo '<h4 class="font-1-s color-c12">Pré-requisitos:</h4>';
-                echo '<span class="font-2-xs color-c12">' . $row['requisitos'] . '</span>';
+              
+                foreach ($documento['requisitos'] as $requisito) {
+                    echo '<span class="font-2-xs color-c12">' . $requisito . '<br></span>';
+                }
+            
                 echo '</div>';
                 echo '<div class="opor-datas">';
                 echo '<h4 class="font-1-s color-c12">Datas da seleção:</h4>';
-                echo '<span class="font-2-xs color-c12 date-span">Início da seleção: ' . $row['datainicio'] . '</span>';
-                echo '<span class="font-2-xs color-c12 date-span">Fim da seleção: ' . $row['datafim'] . '</span>';
+                echo '<span class="font-2-xs color-c12 date-span">Início da seleção: ' . $documento['dataInicio'] . '</span>';
+                echo '<span class="font-2-xs color-c12 date-span">Fim da seleção: ' . $documento['dataFim'] . '</span>';
                 echo '</div>';
                 echo '<div class="info-emp">';
                 echo '<h4 class="font-1-s color-c12">Informações da empresa:</h4>';
-                echo '<span class="font-2-xs color-c12 span-info-emp">Área de atuação: ' . $row['setorempresa'] . '</span>';
-                echo '<span class="font-2-xs color-c12 span-info-emp">E-mail para contato: ' . $row['emailempresa'] . '</span>';
-                echo '<span class="font-2-xs color-c12 span-info-emp">Telefone para contato: ' . $row['telefoneempresa'] . '</span>';
+                echo '<span class="font-2-xs color-c12 span-info-emp">Área de atuação: ' . $documento['setorEmpresa'] . '</span>';
+                echo '<span class="font-2-xs color-c12 span-info-emp">E-mail para contato: ' . $documento['emailEmpresa'] . '</span>';
+                echo '<span class="font-2-xs color-c12 span-info-emp">Telefone para contato: ' . $documento['telefoneEmpresa'] . '</span>';
                 echo '</div>';
-                echo '<a class="btn" href="' . $row['linkins'] . '">CANDIDATAR-SE</a>';
+                echo '<a class="btn" href="https://' . $documento['linkIns'] . '">CANDIDATAR-SE</a>';
                 echo '</div>';
                 echo '</div>';
             }
+
         } catch (PDOException $e) {
             // Exibe uma mensagem de erro caso ocorra uma exceção no banco de dados
             echo "Erro na consulta: " . $e->getMessage();
