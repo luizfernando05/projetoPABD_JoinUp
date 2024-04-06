@@ -11,6 +11,14 @@
 
     // Inclui o arquivo de configuração do modelo (presumivelmente contém configurações do sistema)
     include_once('../model/config.php');
+
+    #Collection onde estão as oportunidades
+    $collection = $database->oportunidade;
+
+    #Busca no banco as oportunidades cadastradas
+    $cursor = $collection->find();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -72,14 +80,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="font-1-xs color-c12">Estágio em Desenvolvimento Front-End</td>
-                        <td class="font-1-xs color-c12">Google</td>
-                        <td>
-                            <button>Editar</button>
-                            <button>Excluir</button>
-                        </td>
-                    </tr>
+                    <?php 
+
+                        foreach ($cursor as $documento) {
+                            print "<tr>";
+                            print "    <td class='font-1-xs color-c12'>" . $documento['nomeOportunidade'] . "</td>";
+                            print "    <td class='font-1-xs color-c12'>" . $documento['nomeEmpresa'] . "</td>";
+                            print "    <td>";
+                            print "        <button>Editar</button>";
+                            print "        <button>Excluir</button>";
+                            print "    </td>";
+                            print "</tr>";
+                        }
+
+                    ?>
                 </tbody>
             </table>
         </div>
