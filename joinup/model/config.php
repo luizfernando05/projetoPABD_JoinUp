@@ -12,7 +12,7 @@ try {
 
     $database = $mongoClient->$mongo_db;
 
-    echo "Conexão com o banco de dados estabelecida com sucesso.";
+    // echo "Conexão com o banco de dados estabelecida com sucesso.";
 
 } catch (MongoDB\Exception\Exception $e) {
     die("Erro na conexão com o banco de dados: " . $e->getMessage());
