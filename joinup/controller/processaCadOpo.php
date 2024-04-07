@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Redireciona para uma página de sucesso após o cadastro bem-sucedido
         header("Location: ../view/cadastroSucesso.php");
         exit();
-    } catch (PDOException $e) {
+    } catch (MongoDB\Exception\Exception $e) {
         // Exibe uma mensagem de erro se ocorrer um erro na conexão ou no processo de cadastro
         die("Erro na conexão com o banco de dados: " . $e->getMessage());
     }
