@@ -9,13 +9,13 @@
             $collection = $database->oportunidade; 
             
             #Id do documento que será deletado
-            $id = $_GET["_id"];
+            $id = $_GET["id"];
 
             #Deleta o documento pelo id
-            $deleteResult = $collection->deleteOne(['_id' => $id]);
+            $deleteResult = $collection->deleteOne(['_id' => new MongoDB\BSON\ObjectID($id)]);
             
             // Redireciona para uma página de sucesso após o cadastro bem-sucedido
-            header("Location: ../view/cadastroSucesso.php");
+            header("Location: ../view/indexAdm.php");
             exit();
         } catch (MongoDB\Exception\Exception $e) {
             // Exibe uma mensagem de erro se ocorrer um erro na conexão ou no processo de cadastro
