@@ -59,7 +59,6 @@
             <!-- Texto de direitos autorais e logotipo -->
             <div id="text-foot">
                 <span class="font-1-xs color-c2">© joinup, 2023. Todos os direitos reservados.</span>
-                <img src="./images/logoLuizFernandov1.svg" alt="">
             </div>
         </div>
     </footer>

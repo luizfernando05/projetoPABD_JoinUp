@@ -162,10 +162,6 @@
 
             <!-- Direitos autorais -->
             <p class="font-1-xs color-c2 copy-footer-index">© joinup, 2023. Todos os direitos reservados.</p>
-
-            <!-- Informações de autoria -->
-            <p class="font-1-xs color-c2 autoria-footer-index">Criado e desenvolvido por:</p>
-            <img src="./images/logoLuizFernandov2.svg" alt="Logo Luiz Fernando">
         </div>
     </div>
 </footer>
