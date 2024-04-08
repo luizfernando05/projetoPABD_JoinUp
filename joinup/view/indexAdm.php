@@ -87,7 +87,7 @@
                             echo "    <td class='font-1-xs color-c12'>" . $documento['nomeOportunidade'] . "</td>";
                             echo "    <td class='font-1-xs color-c12'>" . $documento['nomeEmpresa'] . "</td>";
                             echo "    <td>";
-                            echo "        <button>Editar</button>";
+                            echo "        <a href='../view/edicaoOportunidade.php?id=" . $documento['_id'] . "'>Editar</a>";
                             echo "        <a href='../view/exclusaoOportunidade.php?id=" . $documento['_id'] . "'>Excluir</a>";
                             echo "    </td>";
                             echo "</tr>";
