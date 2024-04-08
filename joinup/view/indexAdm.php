@@ -55,9 +55,6 @@
             <!-- Título de saudação -->
             <h1 class="font-1-l color-c12">Olá, o que iremos cadastrar hoje?</h1>
             
-            <!-- Links para páginas de cadastro -->
-            <a id="cadEmpresa" class="btn" href="./cadastroEmpresa.php">Cadastrar Empresa</a>
-            
             <a id="cadOportunidade" class="btn" href="./cadastroOportunidade.php">Cadastrar Oportunidade de Estágio</a>
 
             <!-- Título para acesso ao site principal -->
@@ -69,11 +66,11 @@
     </section>
 
     <section>
-        <div class="container">
+        <div class="container oportunidades-table">
             <h2 class="font-1-l color-c12">Oportunidades cadastradas</h2>
             <table>
                 <thead>
-                    <tr>
+                    <tr class='grid-table'>
                         <th class="font-1-m color-c12">Nome da oportunidade</th>
                         <th class="font-1-m color-c12">Nome da empresa</th>
                         <th class="font-1-m color-c12">Ações</th>
@@ -83,12 +80,12 @@
                     <?php 
 
                         foreach ($cursor as $documento) {
-                            echo "<tr>";
+                            echo "<tr class='grid-table'>";
                             echo "    <td class='font-1-xs color-c12'>" . $documento['nomeOportunidade'] . "</td>";
                             echo "    <td class='font-1-xs color-c12'>" . $documento['nomeEmpresa'] . "</td>";
-                            echo "    <td>";
-                            echo "        <a href='../view/edicaoOportunidade.php?id=" . $documento['_id'] . "'>Editar</a>";
-                            echo "        <a href='../view/exclusaoOportunidade.php?id=" . $documento['_id'] . "'>Excluir</a>";
+                            echo "    <td class='btns-table'>";
+                            echo "        <a class='font-1-xs color-c12' href='../view/edicaoOportunidade.php?id=" . $documento['_id'] . "'>Editar</a>";
+                            echo "        <a class='font-1-xs color-c12' href='../view/exclusaoOportunidade.php?id=" . $documento['_id'] . "'>Excluir</a>";
                             echo "    </td>";
                             echo "</tr>";
                         }
@@ -110,7 +107,6 @@
             <!-- Texto de direitos autorais e logotipo -->
             <div id="text-foot">
                 <span class="font-1-xs color-c2">© joinup, 2023. Todos os direitos reservados.</span>
-                <img src="./images/logoLuizFernandov1.svg" alt="">
             </div>
         </div>
     </footer>

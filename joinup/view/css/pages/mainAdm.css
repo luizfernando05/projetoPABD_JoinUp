@@ -5,3 +5,44 @@
     text-align: start; 
     gap: 32px;
 }
+
+.oportunidades-table {
+    padding-top: 40px;
+}
+
+.oportunidades-table h2 {
+    margin-bottom: 20px;
+}
+
+.oportunidades-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.oportunidades-table thead {
+    border-bottom: 1px solid var(--color-c-05);
+}
+
+.oportunidades-table th {
+    padding-bottom: 8px;
+}
+
+.oportunidades-table td {
+    padding-top: 12px;
+}
+
+.oportunidades-table th, .oportunidades-table td {
+    text-align: left;
+}
+
+.btns-table {
+    text-decoration: none;
+    display: flex;
+    gap: 20px;
+}
+
+.grid-table {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
