@@ -1,13 +1,13 @@
 <h1>
     <img align="center" width="40px" src="./joinup/view/images/logoIncon.svg">
-    <span>JoinUp - Projeto FBD - UFERSA/2023.1</span>
+    <span>JoinUp - Projeto PABD - UFERSA/2023.1</span>
 </h1>
 
-<h3> Informações iniciais: </h3>
+<h3>Informações iniciais:</h3>
 
-<p> O repositório remoto a seguir corresponde ao projeto da disciplina "Fundamentos de Banco de Dados" do curso de Bacharelado em Sistemas de Informação, situado na Universidade Federal Rural do Semi-Árido (UFERSA), campus Angicos. Este projeto foi concebido e desenvolvido pelo estudante Luiz Fernando da Cunha Silva, sob a orientação da Professora Dra. Samara Martins Nascimento Gonçalves. </p>
+<p>O repositório remoto a seguir corresponde ao projeto da disciplina "Projeto e Administração de Banco de Dados" do curso de Bacharelado em Sistemas de Informação, situado na Universidade Federal Rural do Semi-Árido (UFERSA), campus Angicos. Este projeto foi desenvolvido pelos estudantes: Luiz Fernando da Cunha Silva, Letícia Maria Bandeira de Lucena e Andersson Lucas Mendonça Fernandes, sob a orientação da Professora Dra. Samara Martins Nascimento Gonçalves.</p>
 
-<p> O foco primordial deste projeto foi a concepção de um sistema de integração com um banco de dados PostgreSQL. A partir dessa premissa, surgiu o "JoinUp," um site dedicado à divulgação de oportunidades de estágio. Para a concretização desse sistema, foram utilizadas as linguagens HTML e CSS para criar a interface de usuário, enquanto o PHP desempenhou um papel fundamental na integração e manipulação dos dados no banco de dados. </p>
+<p>O foco deste projeto foi a construção de um sistema de integração com um banco de dados MongoDB. A partir dessa premissa, surgiu o "JoinUp," um site dedicado à divulgação de oportunidades de estágio. Para o desenvolvimento desse sistema, foram utilizadas as linguagens HTML e CSS para criar a interface de usuário, enquanto o PHP desempenhou um papel fundamental na integração e manipulação dos dados no banco de dados.</p>
 
 <h3> Índice: </h3>
 
@@ -27,11 +27,10 @@
 Antes de realizar a execução desse sistema em sua máquina local, você precisará atender a vários pré-requisitos, incluindo linguagem de programação, servidor web, banco de dados, extensões PHP e configurações específicas. Aqui estão os principais pré-requisitos:
 
 1. <b>Servidor Web (Apache, Nginx, etc.):</b> é necessário um servidor web instalado na sua máquina local, ou alguma extensão em sua IDE que atenda esse requisito. O Apache e o Nginx são escolhas populares. Isso permite que você execute o código PHP e sirva páginas da web.
-2. <b>Banco de Dados PostgreSQL:</b> o código da aplicação está configurado para funcionar com um banco de dados PostgreSQL. Portanto, é importante ter o PostgreSQL instalado e configurado na sua máquina local.
+2. <b>Banco de Dados MongoDB:</b> o código da aplicação está configurado para funcionar com um banco de dados MongoDB. Portanto, é importante ter o MongoDB instalado e configurado na sua máquina local.
 3. <b>PHP:</b> Certifique-se de ter o PHP instalado na sua máquina. Você pode verificar a versão do PHP digitando php -v no terminal.
-4. <b>Extensão PDO PostgreSQL:</b> para se conectar ao banco de dados PostgreSQL, você precisa ter a extensão PDO PostgreSQL habilitada no PHP. Verifique se essa extensão está habilitada no seu arquivo de configuração php.ini.
-5. <b>Extensão PDO:</b> a extensão PDO é necessária para trabalhar com bancos de dados usando o PDO (PHP Data Objects). Verifique se a extensão PDO também está habilitada no seu PHP.
-6. <b>Ambiente de Desenvolvimento:</b> Um ambiente de desenvolvimento integrado (IDE) ou editor de texto para escrever e editar seu código, como Visual Studio Code, PHPStorm ou qualquer editor de sua escolha.
+4. <b>Driver PHP do MongoDB:</b> para se conectar ao banco de dados PostgreSQL, você precisa ter a extensão do driver do MongoDB habilitada no PHP. Verifique se essa extensão está habilitada no seu arquivo de configuração php.ini.
+5. <b>Ambiente de Desenvolvimento:</b> Um ambiente de desenvolvimento integrado (IDE) ou editor de texto para escrever e editar seu código, como Visual Studio Code, PHPStorm ou qualquer editor de sua escolha.
 
 </div>
 
@@ -44,10 +43,10 @@ Para visualizar esta aplicação na sua máquina local, siga os seguintes passos
 1. <b>Clone o Repositório:</b> Clone este repositório em sua máquina local usando o seguinte comando no terminal:
 
 ```
-   git clone https://github.com/luizfernando05/projetoBD_joinup
+   git clone https://github.com/luizfernando05/projetoPABD_JoinUp
 ```
 
-2. <b>Crie o Banco de Dados:</b> Acesse seu sistema PostgreSQL e crie um banco de dados para a aplicação. Você pode fazer isso copiando e colando o conteúdo do arquivo [joinup.sql](./sql/joinup.sql) fornecido neste repositório.
+2. <b>Adicione adminitradores no banco de dados:</b> Acesse seu sistema MongoDB e insira um script para adicionar administradores no sistemao. Você pode fazer isso copiando e colando o conteúdo do arquivo [joinup.sql](./db/joinup.sql) fornecido neste repositório.
 
 3. <b>Configure o Arquivo config.php:</b> Abra o arquivo [config.php](./joinup/model/config.php) e insira suas informações de conexão ao banco de dados, incluindo host, porta, nome do banco de dados, nome de usuário e senha.
 
@@ -76,24 +75,25 @@ Além desses, existem outros dois diretórios importantes neste repositório, o 
 
 <h4>Sumário simplificado desse repositório: </h4>
 
-- doc/
-    - [bancoDados.md](./doc/bandoDados.md)
-    - [maniDados.md](./doc/maniDados.md)
 - joinup/
     - controller/
         - [atoLoginAdm.php](./joinup/controller/atoLoginAdm.php)
-        - [processaCadEmp.php](./joinup/controller/processaCadEmp.php)
         - [processaCadOpo.php](./joinup/controller/processaCadOpo.php)
+        - [processaEdiOpo.php](./joinup/controller/processaEdiOpo.php)
+        - [processaExcOpo.php](./joinup/controller/processaExcOpo.php)
     - model/
         - [config.php](./joinup/model/config.php)
     - view/
         - [css/](./joinup/view/css)
-        - [cadastroEmpresa.php](./joinup/view/cadastroEmpresa.php)
         - [cadastroOportunidade.php](./joinup/view/cadastroOportunidade.php)
         - [cadastroSucesso.php](./joinup/view/cadastroSucesso.php)
+        - [edicaoOportunidade.php](./joinup/view/edicaoOportunidade.php)
+        - [exclusaoOportunidade.php](./joinup/view/exclusaoOportunidade.php)
         - [index.php](./joinup/view/index.php)
         - [indexAdm.php](./joinup/view/indexAdm.php)
         - [loginAdm.php](./joinup/view/loginAdm.php)
+- db/
+    - [joinup.sql](./db/joinup.sql)
 
 </div>
 
@@ -114,10 +114,9 @@ Além desses, existem outros dois diretórios importantes neste repositório, o 
 <div id='rodape'>
 
 ------
-<h4> Projeto da Disciplina Fundamentos de Banco de Dados </h4>
+<h4> Projeto da Disciplina Projeto e Administração de Banco de Dados </h4>
 <p> Universidade Federal Rural do Semi-Árido (UFERSA), Angicos-RN - Bacharelado em Sistemas de Informação</p>
-<p> © Luiz Fernando, 2023 </p>
-<img src="./joinup/view/images/logoLuizFernandov2.svg">
+<p> © Luiz Fernando, Letícia Bandeira e Andersson Lucas, 2024 </p>
 
 </div>  
 
