@@ -16,9 +16,6 @@
 3. [Licença](./LICENSE.md)
 4. [Organização do Repositório](#organizacao)
 5. [Introdução ao Projeto](#introducao)
-3. [Criação do Banco de dados](./doc/bandoDados.md)
-4. [Manipulação dos Dados](./doc/maniDados.md)
-5. [Referências]()
 
 <div id='pre-instalacao'>
 
