@@ -71,8 +71,6 @@ O seguinte repositório utiliza o padrão de arquitetura MVC (Model-View-Control
 2. View: representa a camada de visualização e lida com a apresentação de dados aos usuários. Ela não deve conter lógica de negócios, apenas a exibição dos dados, sendo assim, organiza as classes e módulos relacionados à interface do usuário.
 3. Controller: atuam como intermediários entre a camada de modelo e a camada de visualização. Eles recebem as solicitações do usuário, interagem com o modelo para obter ou modificar dados e, em seguida, passam os dados processados para a camada de visualização. Nessa camada, são organizadas as classes e módulos relacionados ao controle de fluxo e interações entre modelo e visualização.
 
-Além desses, existem outros dois diretórios importantes neste repositório, o sql, onde está presente todas as interações (CREATE, DELETE, etc) feitas diretamente com o banco de dados, e o doc, o qual apresenta alguns documentos simples desta aplicação.
-
 <h4>Sumário simplificado desse repositório: </h4>
 
 - joinup/
