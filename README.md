@@ -1,6 +1,6 @@
 <h1>
     <img align="center" width="40px" src="./joinup/view/images/logoIncon.svg">
-    <span>JoinUp - Projeto PABD - UFERSA/2023.1</span>
+    <span>JoinUp - Projeto PABD - UFERSA/2023.2</span>
 </h1>
 
 <h3>Informações iniciais:</h3>
