@@ -5,7 +5,7 @@
 
 <h3>Informações iniciais:</h3>
 
-<p>O repositório remoto a seguir corresponde ao projeto da disciplina "Projeto e Administração de Banco de Dados" do curso de Bacharelado em Sistemas de Informação, situado na Universidade Federal Rural do Semi-Árido (UFERSA), campus Angicos. Este projeto foi desenvolvido pelos estudantes: Luiz Fernando da Cunha Silva, Letícia Maria Bandeira de Lucena e Andersson Lucas Mendonça Fernandes, sob a orientação da Professora Dra. Samara Martins Nascimento Gonçalves.</p>
+<p>O repositório remoto a seguir corresponde ao projeto da disciplina "Projeto e Administração de Banco de Dados" do curso de Bacharelado em Sistemas de Informação, situado na Universidade Federal Rural do Semi-Árido (UFERSA), campus Angicos. Este projeto foi desenvolvido pelos estudantes: Luiz Fernando da Cunha Silva e Letícia Maria Bandeira de Lucena, sob a orientação da Professora Dra. Samara Martins Nascimento Gonçalves.</p>
 
 <p>O foco deste projeto foi a construção de um sistema de integração com um banco de dados MongoDB. A partir dessa premissa, surgiu o "JoinUp," um site dedicado à divulgação de oportunidades de estágio. Para o desenvolvimento desse sistema, foram utilizadas as linguagens HTML e CSS para criar a interface de usuário, enquanto o PHP desempenhou um papel fundamental na integração e manipulação dos dados no banco de dados.</p>
 
@@ -111,7 +111,7 @@ O seguinte repositório utiliza o padrão de arquitetura MVC (Model-View-Control
 ------
 <h4> Projeto da Disciplina Projeto e Administração de Banco de Dados </h4>
 <p> Universidade Federal Rural do Semi-Árido (UFERSA), Angicos-RN - Bacharelado em Sistemas de Informação</p>
-<p> © Luiz Fernando, Letícia Bandeira e Andersson Lucas, 2024 </p>
+<p> © Luiz Fernando e Letícia Bandeira, 2024 </p>
 
 </div>  
 
